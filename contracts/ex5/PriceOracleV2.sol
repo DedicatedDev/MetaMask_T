@@ -2,11 +2,9 @@
 pragma solidity 0.8.4;
 
 import "./Proxiable.sol";
-
 contract PriceOracleV2 is Proxiable {
-
+  address _owner = address(1);
   address _lastContributor;
-  address _owner;
   uint256 _price;
 
   function constructor1() public {

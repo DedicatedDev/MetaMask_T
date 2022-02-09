@@ -84,8 +84,6 @@ describe("Oracle", async() => {
     // we update proxy implementation to V2
     await proxy.updateCode(oracleImplv2.address)
     
-    //proxy = PriceOracleFactory.attach(oracleProxy.address) 
-    oracleProxy = await OracleProxyFactory.deploy("0x473be604",oracleImplv1.address)
     let proxy2 =  PriceOracleV2Factory.attach(oracleProxy.address)
     await proxy2.updateCode(oracleImplv3.address)
   })
